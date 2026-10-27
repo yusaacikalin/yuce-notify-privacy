@@ -1,18 +1,16 @@
 # Yuce Notify Gizlilik Politikası
 
-**Son güncelleme: 7 Ekim 2026**
+**Son güncelleme: 27 Ekim 2026**
 
-Yuce Notify, **GELİŞTİRİCİ_ADI** tarafından sunulan çevrimdışı bir Android bildirim yönetimi uygulamasıdır.
+Yuce Notify, **Yuşa Açıkalın** tarafından sunulan, bildirim kurallarını cihaz üzerinde çalıştıran bir Android bildirim yönetimi uygulamasıdır.
 
 Bu Gizlilik Politikası, Yuce Notify uygulamasının hangi verilere eriştiğini, bu verileri nasıl kullandığını ve nasıl sakladığını açıklamaktadır.
 
 ## 1. Genel ilke
 
-Yuce Notify çevrimdışı çalışır.
+Bildirim filtreleme, kurallar ve yerel geçmiş internet olmadan çalışır. Bildirim içerikleri, telefon numaraları, kişi bilgileri, kural ve grup adları reklam veya analiz hizmetlerine gönderilmez.
 
-Uygulama tarafından erişilen bildirim içerikleri, telefon numaraları, kullanıcı tarafından oluşturulan kurallar ve diğer uygulama verileri geliştiriciye ait bir sunucuya gönderilmez.
-
-Uygulama reklam, kullanıcı takibi, analiz veya bulut tabanlı veri işleme hizmeti kullanmaz. Kullanıcı verileri satılmaz ve reklam amacıyla kullanılmaz.
+Uygulama reklamlar için Google AdMob ve gizlilik tercihleri için Google User Messaging Platform (UMP) kullanır. Yayın sürümü ayrıca Firebase Analytics ve Crashlytics kullanır. Kullanıcı geri bildirim göndermeyi seçerse formdaki bilgiler Firebase Firestore üzerinden geliştiriciye iletilir. Bu çevrimiçi hizmetler internet bağlantısı gerektirir; ayrıntıları aşağıdadır.
 
 ## 2. Bildirim verileri
 
@@ -103,7 +101,7 @@ Varsayılan saklama süresi 3 aydır. Seçilen süreden eski kayıtlar uygulaman
 
 Kullanıcının oluşturduğu gruplar, bildirim kuralları, telefon kuralları ve tercihler kullanıcı tarafından silinene, uygulama verileri temizlenene veya uygulama kaldırılana kadar cihazda saklanabilir.
 
-Yuce Notify uygulama verilerinin bulut yedeklemesine veya cihazlar arası otomatik aktarımına izin vermez.
+Android'in otomatik bulut yedeklemesi ve otomatik cihaz aktarımı kapalıdır. Kullanıcı veritabanını kendisi dışa aktarırsa seçtiği dosya veya depolama sağlayıcısında bir kopya oluşur; bu kopyaların saklanması, paylaşılması ve silinmesi kullanıcının kontrolündedir.
 
 ## 7. Verilerin silinmesi
 
@@ -114,19 +112,17 @@ Kullanıcı aşağıdaki yöntemlerle verilerini silebilir:
 - Android uygulama ayarlarından Yuce Notify verilerini temizlemek
 - Yuce Notify uygulamasını cihazdan kaldırmak
 
-Yuce Notify kullanıcı hesabı oluşturmaz ve geliştirici sunucusunda kullanıcı verisi saklamaz. Bu nedenle geliştiricinin uzaktan silebileceği sunucu taraflı bir kullanıcı hesabı veya veri kaydı bulunmamaktadır.
+Yuce Notify kullanıcı hesabı oluşturmaz. Yerel verilerin silinmesi daha önce gönderilen geri bildirimleri veya hizmet sağlayıcıların tuttuğu reklam, kullanım ve hata kayıtlarını otomatik olarak silmez. Gönderdiğiniz geri bildirimle ilgili erişim veya silme talepleri için aşağıdaki iletişim adresini kullanabilirsiniz. Üçüncü taraf hizmetlerdeki veriler ilgili hizmetin saklama ve gizlilik uygulamalarına tabidir.
 
-## 8. Verilerin paylaşılması
+## 8. Reklamlar ve gizlilik tercihleri
 
-Yuce Notify tarafından erişilen veya cihazda saklanan kişisel ve hassas veriler:
+Google AdMob, alt banner ve uygulamaya dönüşte açılış reklamları sunar. Google Mobile Ads SDK; IP adresi (yaklaşık konum çıkarımı dahil), reklam ve uygulama etkileşimleri, tanılama bilgileri ve reklam kimliği/uygulama kümesi kimliği gibi cihaz tanımlayıcılarını reklam sunumu, ölçüm ve kötüye kullanımın önlenmesi amacıyla işleyebilir. Yuce Notify, bildirim metinlerini, kişi bilgilerini veya kuralları bu SDK'ya aktarmaz; hassas konum izni istemez.
 
-- Geliştiriciye gönderilmez
-- Üçüncü taraflarla paylaşılmaz
-- Satılmaz
-- Reklam amacıyla kullanılmaz
-- Analiz veya kullanıcı profili oluşturmak amacıyla kullanılmaz
+Gereken bölgelerde Google UMP gizlilik mesajı gösterilir ve reklam istekleri UMP'nin izin durumuna göre başlatılır. Sunulduğu durumlarda Ayarlar > Reklam gizlilik tercihleri üzerinden tercihlerinizi değiştirebilirsiniz. Kişiselleştirmeye izin vermemek bütün reklamları kaldırmak anlamına gelmez; uygun olduğunda sınırlı veya kişiselleştirilmemiş reklamlar sunulabilir. Android'in reklam ayarlarından reklam kimliğinizi yönetebilirsiniz.
 
-Uygulama internet erişim izni istemez.
+Debug sürümü Google'ın test reklam birimlerini kullanır. Test reklamları da Google hizmetlerine ağ isteği gönderir. Yayın sürümünde uygulamaya ait reklam birimleri kullanılır.
+
+[Google Gizlilik Politikası](https://policies.google.com/privacy), [Google hizmetlerini kullanan uygulamalardaki veriler](https://policies.google.com/technologies/partner-sites) ve [Mobile Ads SDK veri açıklamaları](https://developers.google.com/admob/android/privacy/play-data-disclosure).
 
 ## 9. Güvenlik
 
@@ -134,17 +130,21 @@ Veriler Android'in uygulamaya özel depolama alanında saklanır. Diğer uygulam
 
 Hassas içerik gösteren uygulama ekranlarında ekran görüntüsü ve ekran kaydı gibi işlemleri sınırlandırmaya yönelik Android güvenlik özellikleri kullanılabilir.
 
-Hiçbir elektronik saklama yöntemi mutlak güvenlik garantisi sağlayamasa da Yuce Notify, kullanıcı verilerinin cihaz dışına çıkarılmaması ve gereksiz erişimlerin istenmemesi esasına göre tasarlanmıştır.
+Hiçbir elektronik saklama veya aktarım yöntemi mutlak güvenlik garantisi sağlamaz. Bildirim ve telefon kuralları yerel olarak işlenir; çevrimiçi hizmetler için yalnızca bu politikada belirtilen veriler kullanılır.
 
 ## 10. Çocukların gizliliği
 
-Yuce Notify özellikle çocuklara yönelik olarak tasarlanmamıştır. Uygulama, geliştiriciye ait bir sunucu üzerinden çocuklardan veya diğer kullanıcılardan bilerek kişisel veri toplamaz.
+Yuce Notify özellikle çocuklara yönelik olarak tasarlanmamıştır. Reklam, analiz ve geri bildirim hizmetlerinin veri uygulamaları bu politikada açıklanmıştır. Bir çocuğun geri bildirim yoluyla kişisel bilgi gönderdiğini düşünüyorsanız aşağıdaki adresten iletişime geçebilirsiniz.
 
-## 11. Üçüncü taraf hizmetleri
+## 11. Analiz, hata raporları ve isteğe bağlı geri bildirim
 
-Yuce Notify reklam, analiz, sosyal medya takibi veya bulut veri depolama amacıyla üçüncü taraf hizmetleri kullanmaz.
+**Firebase Analytics ve Crashlytics:** Yayın sürümünde ekran ve oturum kullanımı, uygulama/Android sürümü, cihaz bilgileri, kullanım ve hata tanılama verileri Google Firebase tarafından işlenebilir. Uygulamanın günlük özeti yalnızca grup, kural, etkin kural, geçmiş kaydı ve işlenen bildirim sayılarını gönderir. Özel olaylara bildirim içeriği, telefon numarası, kişi adı, kural/grup adı, hedef uygulama paketi veya dosya yolu eklenmez. Debug sürümünde Analytics ve Crashlytics SDK'ları bulunmaz.
 
-Uygulama, işlevlerini gerçekleştirmek için Android işletim sisteminin sağladığı sistem bileşenlerini ve açık kaynak Android yazılım kütüphanelerini kullanabilir. Bu bileşenlerin yerel kullanımı, kullanıcı verilerinin geliştiriciye gönderildiği anlamına gelmez.
+**Geri bildirim:** Kullanıcı gönder düğmesine bastığında seçilen konu, yazdığı açıklama, isteğe bağlı e-posta adresi, uygulama ve Android sürümü, cihaz modeli, uygulama/cihaz dili ve gönderim zamanı Yuce Notify'ye ait Firebase Firestore projesine iletilir. Bildirim geçmişi veya telefon rehberi otomatik olarak eklenmez. Açıklama alanına gereksiz hassas bilgi yazmayın. Veriler geri bildirimi değerlendirmek ve gerekirse yanıtlamak için kullanılır.
+
+Google hizmetleri verileri kullanıcının ülkesi dışındaki sunucularda işleyebilir. Hizmet sağlayıcıların saklama uygulamaları ve kullanılabilir kontrolleri kendi politikalarında açıklanır: [Firebase gizlilik ve güvenlik](https://firebase.google.com/support/privacy).
+
+Uygulama güncelleme kontrolü ve mağaza sayfaları için Google Play hizmetlerini kullanabilir. Android sistem bileşenleri ve açık kaynak kütüphaneler temel işlevleri destekler.
 
 ## 12. Gizlilik Politikasındaki değişiklikler
 
@@ -158,3 +158,4 @@ Bu Gizlilik Politikası veya Yuce Notify uygulamasındaki veri uygulamaları hak
 
 **Geliştirici:** Yuşa Açıkalın  
 **E-posta:** yucenotify@gmail.com
+
