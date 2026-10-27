@@ -112,7 +112,11 @@ Kullanıcı aşağıdaki yöntemlerle verilerini silebilir:
 - Android uygulama ayarlarından Yuce Notify verilerini temizlemek
 - Yuce Notify uygulamasını cihazdan kaldırmak
 
-Yuce Notify kullanıcı hesabı oluşturmaz. Yerel verilerin silinmesi daha önce gönderilen geri bildirimleri veya hizmet sağlayıcıların tuttuğu reklam, kullanım ve hata kayıtlarını otomatik olarak silmez. Gönderdiğiniz geri bildirimle ilgili erişim veya silme talepleri için aşağıdaki iletişim adresini kullanabilirsiniz. Üçüncü taraf hizmetlerdeki veriler ilgili hizmetin saklama ve gizlilik uygulamalarına tabidir.
+Yuce Notify kullanıcı hesabı oluşturmaz. Yerel verilerin silinmesi daha önce gönderilen geri bildirimleri veya hizmet sağlayıcıların tuttuğu reklam, kullanım ve hata kayıtlarını otomatik olarak silmez.
+
+**Gönderdiğiniz geri bildirimin silinmesini istemek için:** [yucenotify@gmail.com](mailto:yucenotify@gmail.com) adresine “Yuce Notify veri silme talebi” konulu bir e-posta gönderin. Geri bildirimi bulabilmemiz için yaklaşık gönderim tarihini ve varsa geri bildirimde kullandığınız e-posta adresini belirtin. Bildirim geçmişinizi, kişi listenizi veya şifrenizi göndermeyin. Eşleştirilebilen geri bildirimin açıklaması, e-posta adresi ve beraberindeki cihaz/tanılama bilgileri silme talebine dahildir. Talebin kapsamı ve tamamlanma durumu size bildirilir.
+
+Google'ın reklam, analiz, hata raporu ve satın alma kayıtları kendi hizmetlerinin saklama ve silme kurallarına tabidir; bu kayıtların tamamını yalnızca e-posta adresiyle eşleştirmek mümkün olmayabilir. Google Play işlem kayıtları ve yasal olarak saklanması gereken bilgiler geri bildirim silme talebiyle kaldırılmaz. Google hesabınızın ve Android reklam ayarlarının ilgili gizlilik kontrollerini de kullanabilirsiniz. Uygulamayı kaldırmak veya veri silme talebi göndermek Google Play aboneliğini iptal etmez; abonelikler Google Play üzerinden yönetilir.
 
 ## 8. Reklamlar ve gizlilik tercihleri
 
@@ -121,6 +125,8 @@ Google AdMob, alt banner ve uygulamaya dönüşte açılış reklamları sunar. 
 Gereken bölgelerde Google UMP gizlilik mesajı gösterilir ve reklam istekleri UMP'nin izin durumuna göre başlatılır. Sunulduğu durumlarda Ayarlar > Reklam gizlilik tercihleri üzerinden tercihlerinizi değiştirebilirsiniz. Kişiselleştirmeye izin vermemek bütün reklamları kaldırmak anlamına gelmez; uygun olduğunda sınırlı veya kişiselleştirilmemiş reklamlar sunulabilir. Android'in reklam ayarlarından reklam kimliğinizi yönetebilirsiniz.
 
 Debug sürümü Google'ın test reklam birimlerini kullanır. Test reklamları da Google hizmetlerine ağ isteği gönderir. Yayın sürümünde uygulamaya ait reklam birimleri kullanılır.
+
+Etkin bir Pro hakkı doğrulandığında uygulama banner ve açılış reklamı istemeyi durdurur.
 
 [Google Gizlilik Politikası](https://policies.google.com/privacy), [Google hizmetlerini kullanan uygulamalardaki veriler](https://policies.google.com/technologies/partner-sites) ve [Mobile Ads SDK veri açıklamaları](https://developers.google.com/admob/android/privacy/play-data-disclosure).
 
@@ -138,11 +144,13 @@ Yuce Notify özellikle çocuklara yönelik olarak tasarlanmamıştır. Reklam, a
 
 ## 11. Analiz, hata raporları ve isteğe bağlı geri bildirim
 
-**Firebase Analytics ve Crashlytics:** Yayın sürümünde ekran ve oturum kullanımı, uygulama/Android sürümü, cihaz bilgileri, kullanım ve hata tanılama verileri Google Firebase tarafından işlenebilir. Uygulamanın günlük özeti yalnızca grup, kural, etkin kural, geçmiş kaydı ve işlenen bildirim sayılarını gönderir. Özel olaylara bildirim içeriği, telefon numarası, kişi adı, kural/grup adı, hedef uygulama paketi veya dosya yolu eklenmez. Debug sürümünde Analytics ve Crashlytics SDK'ları bulunmaz.
+**Firebase Analytics ve Crashlytics:** Yayın sürümünde ekran ve oturum kullanımı, uygulama/Android sürümü, cihaz bilgileri, kullanım ve hata tanılama verileri Google Firebase tarafından işlenebilir. Uygulamanın günlük özeti yalnızca grup, kural, etkin kural, geçmiş kaydı ve işlenen bildirim sayılarını gönderir. Özel olaylara bildirim içeriği, telefon numarası, kişi adı, kural/grup adı, hedef uygulama paketi veya dosya yolu eklenmez. Debug sürümünde Analytics SDK bulunmaz; Crashlytics hem debug hem yayın sürümünde etkindir ve her sürüm ayrı uygulama kaydına rapor gönderir. Yakalanan hata raporlarına sabit işlem/ekran adları, hata türü ve çağrı yığını eklenir; özel veri içerebilen ham hata mesajları çıkarılır. Otomatik çökme ve ANR raporları Firebase Crashlytics'in standart hata tanılama verilerini içerir.
 
 **Geri bildirim:** Kullanıcı gönder düğmesine bastığında seçilen konu, yazdığı açıklama, isteğe bağlı e-posta adresi, uygulama ve Android sürümü, cihaz modeli, uygulama/cihaz dili ve gönderim zamanı Yuce Notify'ye ait Firebase Firestore projesine iletilir. Bildirim geçmişi veya telefon rehberi otomatik olarak eklenmez. Açıklama alanına gereksiz hassas bilgi yazmayın. Veriler geri bildirimi değerlendirmek ve gerekirse yanıtlamak için kullanılır.
 
 Google hizmetleri verileri kullanıcının ülkesi dışındaki sunucularda işleyebilir. Hizmet sağlayıcıların saklama uygulamaları ve kullanılabilir kontrolleri kendi politikalarında açıklanır: [Firebase gizlilik ve güvenlik](https://firebase.google.com/support/privacy).
+
+**Pro satın alımları ve abonelikler:** İsteğe bağlı Pro satın alımları Google Play Billing üzerinden gerçekleştirilir. Uygulama, Pro erişimini etkinleştirmek veya geri yüklemek için ürün kimliği, satın alma durumu ve satın alma belirteci gibi Google Play'in sağladığı işlem bilgilerini işler; son doğrulanan Pro ürününü cihazda saklar. Kart numarası ve ödeme hesabının şifresi uygulamaya veya geliştiriciye verilmez. Firebase Analytics, yayın sürümünde satın alma/abonelik olaylarını ürün ve fiyat bilgileriyle ölçebilir. Ödemeler ve abonelik yönetimi Google Play'in politikalarına tabidir.
 
 Uygulama güncelleme kontrolü ve mağaza sayfaları için Google Play hizmetlerini kullanabilir. Android sistem bileşenleri ve açık kaynak kütüphaneler temel işlevleri destekler.
 
